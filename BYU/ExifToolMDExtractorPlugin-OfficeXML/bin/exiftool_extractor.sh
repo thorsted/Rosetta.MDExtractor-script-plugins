@@ -1,7 +1,8 @@
 #!/bin/sh
+executionID=$$
 outFile="out"
-now=`awk -v min=5 -v max=10 'BEGIN{srand(); print int(1+rand()*(999999-min+1))}'`
-outFile='out_'$now'.xml'
+#now=`awk -v min=5 -v max=10 'BEGIN{srand(); print int(1+rand()*(999999-min+1))}'`
+outFile='out_'$executionID'.xml'
 
 exiftool -X $1 > $outFile
 

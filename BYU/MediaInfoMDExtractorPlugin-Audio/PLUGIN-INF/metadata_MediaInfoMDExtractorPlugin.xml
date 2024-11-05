@@ -7,7 +7,7 @@
     </fr:x_form>
   </pl:initParameters>
   <pl:description>MediaInfo MD Extractor Script Plugin</pl:description>
-  <pl:version>1.1</pl:version>
+  <pl:version>1.2</pl:version>
   <pl:materialType>DIGITAL</pl:materialType>
   <pl:module>Preservation</pl:module>
   <pl:generalType>TASK</pl:generalType>

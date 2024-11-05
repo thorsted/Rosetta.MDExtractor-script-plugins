@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # tool output file
+executionID=$$
 outFile="out"
-now=`awk -v min=5 -v max=10 'BEGIN{srand(); print int(1+rand()*(999999-min+1))}'`
-outFile='out_'$now'.xml'
+#now=`awk -v min=5 -v max=10 'BEGIN{srand(); print int(1+rand()*(999999-min+1))}'`
+outFile='out_'$executionID'.xml'
 mediainfo -f --Output=XML $1 > $outFile
 
 tool_agent=`mediainfo --Version | sed ':a;N;s,\n,,g'`
@@ -17,5 +18,3 @@ output=$output'<agent>'$tool_agent'</agent><mimeType>'$mimeType'</mimeType></mdE
 retval=$status
 echo $output
 rm $outFile
-
-exit $retval
